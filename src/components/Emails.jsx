@@ -1,9 +1,10 @@
 import { Email } from "./Email"
 
-export const Emails = ({toggleRead, toggleStar, filteredEmails}) => {
+export const Emails = ({toggleRead, toggleStar, filteredEmails, searchEmails, toggleSearch}) => {
+    const emails = (toggleSearch) ? searchEmails : filteredEmails
     return (
         <ul>
-          {filteredEmails.map((email, index) => (
+          {emails.map((email, index) => (
             <Email key={index} 
                 email={email}
                 toggleRead={toggleRead}

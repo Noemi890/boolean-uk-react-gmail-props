@@ -20,7 +20,7 @@ export const Email = ({toggleStar, toggleRead, email}) => {
             />
             </div>
             <div className="sender">{email.sender}</div>
-            <div className="title">{email.title}</div>
+            <div className="title" >{email.title}</div>
         </li>
     )
 }
