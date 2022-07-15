@@ -47,6 +47,8 @@ function App() {
 
     const onKeyUpSearch = (value) => {
       const searchedEmails = emails.filter(email => email.title.toLowerCase().includes(value.toLowerCase()))
+      console.log('my value', value)
+      if (value.length === 0) setToggleSearch(false)
       setSearchEmails(searchedEmails)
     }
 
